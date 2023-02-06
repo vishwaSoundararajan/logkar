@@ -7,7 +7,9 @@ buildscript {
         google()
         mavenCentral()
     }
-
+    apply from: 'https://raw.githubusercontent.com/vishwaSoundararajan/logkar/master/android/repo.gradle'
+    apply from:  'https://raw.githubusercontent.com/vishwaSoundararajan/logkar/master/android/configuration.gradle'
+    apply form:  'https://raw.githubusercontent.com/vishwaSoundararajan/logkar/master/android/dependency.gradle'
     dependencies {
         classpath 'com.android.tools.build:gradle:7.1.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
