@@ -1,6 +1,6 @@
 name: logkar
 description: Plug-ins first gained popularity in the 1990s as software and microprocesso
-version: 0.0.3
+version: 0.0.6
 homepage: https://github.com/vishwaSoundararajan/logkar.git
 
 environment:
@@ -37,6 +37,22 @@ flutter:
       android:
         package: com.example.logkar
         pluginClass: LogkarPlugin
+        androidGradleConfig:
+          repositories {
+          maven {
+          url "https://jitpack.io"
+          credentials {username authToken}
+          }
+          }
+        dependencies:
+          implementation 'io.resu:ReAndroidSDK_5f7a2e8e_1bdb_4739_9d28_278a2759394c:-SNAPSHOT'
+           android:
+              buildGradleConfig:
+              configurations.all {
+                resolutionStrategy {
+                  cacheChangingModulesFor 0, 'seconds'
+                }
+              }
       ios:
         pluginClass: LogkarPlugin
 

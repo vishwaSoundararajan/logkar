@@ -36,13 +36,11 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 31
-    defaultConfig {
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
-    }
+
     repositories {
         maven {
             url "https://jitpack.io"
+            credentials {username authToken}
         }
     }
 
