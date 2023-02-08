@@ -46,8 +46,8 @@ flutter:
           }
         dependencies:
           implementation 'io.resu:ReAndroidSDK_5f7a2e8e_1bdb_4739_9d28_278a2759394c:-SNAPSHOT'
-           android:
-              buildGradleConfig:
+        android:
+        buildGradleConfig:
               configurations.all {
                 resolutionStrategy {
                   cacheChangingModulesFor 0, 'seconds'
